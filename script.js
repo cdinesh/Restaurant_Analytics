@@ -594,6 +594,153 @@ function initializeCharts() {
             }
         }
     });
+
+    // Predictive Analytics Charts
+    new Chart(document.getElementById('demandPredictionChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Grilled Salmon', 'Truffle Pasta', 'Caesar Salad', 'Seafood Risotto', 'Chocolate Cake'],
+            datasets: [{
+                label: 'Predicted Orders',
+                data: [45, 38, 32, 28, 15],
+                backgroundColor: '#FF6B35',
+                borderColor: '#FF6B35',
+                borderWidth: 1
+            }, {
+                label: 'Actual Orders',
+                data: [42, 35, 30, 25, 12],
+                backgroundColor: 'rgba(255, 107, 53, 0.3)',
+                borderColor: '#FF6B35',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            ...chartConfig,
+            plugins: {
+                ...chartConfig.plugins,
+                title: {
+                    display: true,
+                    text: 'Menu Item Demand Prediction',
+                    font: {
+                        family: 'Inter',
+                        size: 14,
+                        weight: '600'
+                    }
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('salesForecastChart'), {
+        type: 'line',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                label: 'Predicted Sales',
+                data: [2800, 3200, 2900, 3500, 4200, 4800, 3800],
+                borderColor: '#FF6B35',
+                backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                fill: true,
+                tension: 0.4
+            }, {
+                label: 'Actual Sales',
+                data: [2750, 3150, 2850, 3450, 4150, 4750, 3750],
+                borderColor: '#4ECDC4',
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            ...chartConfig,
+            plugins: {
+                ...chartConfig.plugins,
+                title: {
+                    display: true,
+                    text: 'Sales Per Menu Item Forecast',
+                    font: {
+                        family: 'Inter',
+                        size: 14,
+                        weight: '600'
+                    }
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('trafficForecastChart'), {
+        type: 'line',
+        data: {
+            labels: ['6AM', '9AM', '12PM', '3PM', '6PM', '9PM', '12AM'],
+            datasets: [{
+                label: 'Predicted Traffic',
+                data: [15, 25, 85, 35, 120, 95, 45],
+                borderColor: '#FF6B35',
+                backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                fill: true,
+                tension: 0.4
+            }, {
+                label: 'Actual Traffic',
+                data: [12, 22, 82, 32, 118, 92, 42],
+                borderColor: '#4ECDC4',
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            ...chartConfig,
+            plugins: {
+                ...chartConfig.plugins,
+                title: {
+                    display: true,
+                    text: 'Customer Traffic Forecasting',
+                    font: {
+                        family: 'Inter',
+                        size: 14,
+                        weight: '600'
+                    }
+                }
+            }
+        }
+    });
+
+    new Chart(document.getElementById('revenueForecastChart'), {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Predicted Revenue',
+                data: [85000, 92000, 88000, 95000, 102000, 108000, 112000, 118000, 105000, 98000, 92000, 95000],
+                borderColor: '#FF6B35',
+                backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                fill: true,
+                tension: 0.4
+            }, {
+                label: 'Actual Revenue',
+                data: [84500, 91800, 87500, 94800, 101500, 107500, 111500, 117500, 104500, 97500, 91800, 94800],
+                borderColor: '#4ECDC4',
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            ...chartConfig,
+            plugins: {
+                ...chartConfig.plugins,
+                title: {
+                    display: true,
+                    text: 'Revenue Forecasting',
+                    font: {
+                        family: 'Inter',
+                        size: 14,
+                        weight: '600'
+                    }
+                }
+            }
+        }
+    });
 }
 
 // Navigation functionality

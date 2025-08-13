@@ -1711,6 +1711,89 @@ body::before {
     color: #ef4444;
 }
 
+/* Predictive Analytics */
+.predictive-insights {
+    margin-top: 2rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.insight-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.insight-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.insight-header i {
+    font-size: 1.25rem;
+    color: #FF6B35;
+}
+
+.insight-header h4 {
+    margin: 0;
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.insight-card p {
+    color: #5A6C7D;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.insight-confidence {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.confidence-label {
+    font-size: 0.875rem;
+    color: #7F8C8D;
+}
+
+.confidence-value {
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.confidence-value.high {
+    background: rgba(46, 204, 113, 0.1);
+    color: #27AE60;
+}
+
+.confidence-value.medium {
+    background: rgba(243, 156, 18, 0.1);
+    color: #F39C12;
+}
+
+.confidence-value.low {
+    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
+}
+
 /* Campaigns Section */
 .campaigns-section {
     margin-bottom: 2rem;

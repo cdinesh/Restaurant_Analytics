@@ -7,6 +7,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/repo/manifest.webmanifest">
+    <meta name="theme-color" content="#111827">
+    <link rel="apple-touch-icon" href="/repo/icons/icon-192.png">
 </head>
 <body>
     <!-- Navigation -->
@@ -33,6 +36,7 @@
         <!-- Right Navigation Menu -->
         <div class="nav-right">
             <a href="#staffing" class="nav-link">STAFFING</a>
+            <a href="#predictive" class="nav-link">PREDICTIVE</a>
             <a href="#marketing" class="nav-link">MARKETING</a>
             <a href="#reports" class="nav-link">REPORTS</a>
             <a href="#settings" class="nav-link">SETTINGS</a>
@@ -811,6 +815,184 @@
             </div>
         </section>
 
+        <!-- Predictive Analytics -->
+        <section id="predictive" class="section">
+            <div class="section-header">
+                <h1>Predictive Analytics & Forecasting</h1>
+                <p class="subtitle">AI-powered predictions for informed decision making and strategic planning</p>
+            </div>
+
+            <!-- Epic 9: Predictive Analytics -->
+            <div class="epic-section">
+                <!-- Row 1: KPIs Side by Side -->
+                <div class="kpi-row">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Demand Forecast Accuracy</h3>
+                            <div class="kpi-value">94.2%</div>
+                            <div class="kpi-change positive">+2.1% vs last month</div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Customer Churn Risk</h3>
+                            <div class="kpi-value">8.5%</div>
+                            <div class="kpi-change negative">+1.2% vs last week</div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Revenue Forecast</h3>
+                            <div class="kpi-value">$28,450</div>
+                            <div class="kpi-change positive">+12.3% vs last month</div>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="kpi-content">
+                            <h3>Peak Hour Prediction</h3>
+                            <div class="kpi-value">7:00 PM</div>
+                            <div class="kpi-change neutral">Tonight's peak</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Charts Side by Side -->
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Menu Item Demand Prediction</h3>
+                            <div class="chart-actions">
+                                <button class="btn-chart-action" title="Export">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-chart-action" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="demandPredictionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Sales Per Menu Item Forecast</h3>
+                            <div class="chart-actions">
+                                <button class="btn-chart-action" title="Export">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-chart-action" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="salesForecastChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Charts Side by Side -->
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Customer Traffic Forecasting</h3>
+                            <div class="chart-actions">
+                                <button class="btn-chart-action" title="Export">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-chart-action" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="trafficForecastChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Revenue Forecasting</h3>
+                            <div class="chart-actions">
+                                <button class="btn-chart-action" title="Export">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-chart-action" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="revenueForecastChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predictive Insights -->
+                <div class="predictive-insights">
+                    <h3>AI-Powered Predictive Insights</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Menu Optimization</h4>
+                            </div>
+                            <p>Based on demand prediction, "Grilled Salmon" should be featured prominently this week. Expected 23% increase in orders.</p>
+                            <div class="insight-confidence">
+                                <span class="confidence-label">Confidence:</span>
+                                <span class="confidence-value high">92%</span>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h4>Churn Risk Alert</h4>
+                            </div>
+                            <p>15 customers showing signs of decreased engagement. Recommend targeted retention campaign.</p>
+                            <div class="insight-confidence">
+                                <span class="confidence-label">Confidence:</span>
+                                <span class="confidence-value medium">78%</span>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-chart-bar"></i>
+                                <h4>Staffing Recommendation</h4>
+                            </div>
+                            <p>Saturday evening expected to be 35% busier than average. Recommend additional server and kitchen staff.</p>
+                            <div class="insight-confidence">
+                                <span class="confidence-label">Confidence:</span>
+                                <span class="confidence-value high">89%</span>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-dollar-sign"></i>
+                                <h4>Pricing Opportunity</h4>
+                            </div>
+                            <p>"Truffle Pasta" shows low price sensitivity. Consider 8% price increase for 15% revenue boost.</p>
+                            <div class="insight-confidence">
+                                <span class="confidence-label">Confidence:</span>
+                                <span class="confidence-value medium">81%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Marketing & Customer Acquisition -->
         <section id="marketing" class="section">
             <div class="section-header">
@@ -1030,5 +1212,12 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/repo/sw.js").catch(console.error);
+      });
+    }
+    </script>
 </body>
 </html> 
